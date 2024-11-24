@@ -1,0 +1,735 @@
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* ACCUEIL */
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    height: 100vh; /* Assure que le body prend la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column; /* Place les éléments en colonne (header, contenu, footer) */
+    justify-content: space-between; /* Garantit que le footer reste en bas */
+}
+
+/* Section d'accueil */
+#accueil {
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1; /* Permet à cette section de grandir et occuper l'espace restant */
+}
+
+/* Animation typewriter pour le titre principal */
+.typewriter-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00bcd4;
+    border-right: 2px solid #00bcd4; /* Simuler le curseur */
+    width: 0; /* La largeur de l'élément commence à 0 */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation typewriter pour le sous-titre */
+.typewriter-subtitle {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-top: 20px;
+    border-right: 2px solid #e0e0e0; /* Simuler le curseur */
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(25) 5s forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation d'écriture (machine à écrire) */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation du clignotement du curseur */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Stylisation du footer */
+footer {
+    text-align: center;
+    color: #00bcd4;
+    padding: 10px;
+    background-color: #1a1a1a;
+    width: 100%;
+    position: relative; /* Reste en bas, mais peut se déplacer si le contenu devient trop long */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* BARRE OUTILS EN HAUT */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: #0f0f0f;
+    color: #e0e0e0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated Background */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/code-background.gif') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(20, 20, 20, 0.9);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    animation: glow 1.5s infinite alternate;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(20, 20, 20, 0.9);
+    position: relative;
+    z-index: 1;
+    color: #e0e0e0;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+    }
+    to {
+        text-shadow: 0 0 20px #00bcd4, 0 0 40px #00bcd4, 0 0 50px #00bcd4;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .welcome p {
+        font-size: 1rem;
+    }
+}
+
+/* projets */
+.tech-topic {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border-left: 4px solid #ff5722;
+}
+
+.tech-topic h3 {
+    margin: 0 0 10px 0;
+    color: #ff5722;
+}
+
+
+.project-icon {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-icon:hover {
+    transform: scale(1.1);
+}
+
+/* PROFIL */
+/* Styles généraux */
+body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0095f6;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Bannière et photo de profil */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    background: #333;
+}
+
+.profile-picture-container {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border: 3px solid #1a1a1a;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Infos du profil */
+.profile-info {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.stats {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.bio {
+    margin: 10px auto;
+    line-height: 1.5;
+    max-width: 600px;
+    font-size: 0.95rem;
+}
+
+/* Bouton de suivi */
+.follow-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0095f6;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #007bb5;
+}
+
+/* Onglets */
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.tabs a.active {
+    color: #fff;
+    border-bottom: 2px solid #0095f6;
+}
+
+.tabs a:hover {
+    color: #0095f6;
+}
+
+/* Section des publications */
+.posts {
+    padding: 20px;
+    max-width: 600px; /* Limiter la largeur et centrer */
+    margin: 0 auto;
+}
+
+.post {
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* BTS SIO */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: #0f0f0f;
+    color: #e0e0e0;
+}
+
+/* Section BTS Options */
+#bts-options {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#bts-options h2 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#bts-options p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Option Block */
+.option-block {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.option-block h3 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+}
+
+.option-block p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.option-block ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+.option-block ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.option-block ul li::before {
+    content: "•";
+    color: #00bcd4;
+    position: absolute;
+    left: 0;
+}
+
+/* Button Details */
+.btn-details {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #00bcd4;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-details:hover {
+    background: #004d66;
+    color: #fff;
+}
+
+/* Hover Effects for Option Blocks */
+.option-block:hover {
+    transform: scale(1.05);
+    border-color: #00bcd4;
+}
+
+/* Colors for SISR and SLAM */
+.sisr {
+    border-color: #00bcd4;
+}
+
+.sisr:hover {
+    background: #002e3e;
+}
+
+.slam {
+    border-color: #e91e63;
+}
+
+.slam:hover {
+    background: #3e001a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-block {
+        width: 90%;
+    }
+}
+
+/* VEILLES TECHNOLOGIQUES */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: #0f0f0f;
+    color: #e0e0e0;
+}
+
+/* Section Veille Technologique */
+#veille-techno {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#veille-techno h2 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#veille-techno p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Techno Container */
+.techno-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Techno Block */
+.techno-block {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.techno-block h3 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+}
+
+.techno-block p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.techno-block ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+.techno-block ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.techno-block ul li::before {
+    content: "•";
+    color: #00bcd4;
+    position: absolute;
+    left: 0;
+}
+
+/* Button Details */
+.btn-details {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #00bcd4;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-details:hover {
+    background: #004d66;
+    color: #fff;
+}
+
+/* Hover Effects for Techno Blocks */
+.techno-block:hover {
+    transform: scale(1.05);
+    border-color: #00bcd4;
+}
+
+/* Colors for Machine Learning and Informatique Quantique */
+.machine-learning {
+    border-color: #4caf50;
+}
+
+.machine-learning:hover {
+    background: #003e1a;
+}
+
+.informatique-quantique {
+    border-color: #ff5722;
+}
+
+.informatique-quantique:hover {
+    background: #3e1a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .techno-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techno-block {
+        width: 90%;
+    }
+}
+
+/* PROJETS blocks */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: #0f0f0f;
+    color: #e0e0e0;
+}
+
+/* Section Projets */
+#projets {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#projets h2 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#projets p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Projet Section */
+.projet-section {
+    margin-bottom: 40px;
+}
+
+.projet-section h3 {
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+/* Projet Container */
+.projet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Projet Block */
+.projet-block {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: left;
+    text-decoration: none;
+    color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.projet-block:hover {
+    transform: scale(1.05);
+    border-color: #00bcd4;
+    background: #002e3e;
+}
+
+.projet-block h4 {
+    font-size: 1.5rem;
+    color: #00bcd4;
+}
+
+.projet-block p {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.projet-block .arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #00bcd4;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: transform 0.3s;
+}
+
+.projet-block:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projet-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projet-block {
+        width: 90%;
+    }
+}
+
+/* PROFIL INSTAGRAM */
+
